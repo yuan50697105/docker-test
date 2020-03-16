@@ -1,0 +1,10 @@
+version: "3"
+services: 
+  percona:
+    image: percona
+    ports: 
+      - 3309:3306
+    volumes: 
+      - /root/percona:/var/lib/mysql
+    environment: 
+      MYSQL_ROOT_PASSWORD: root

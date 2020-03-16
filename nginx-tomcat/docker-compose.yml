@@ -1,0 +1,49 @@
+version: "3"
+# networks: 
+  # nginx-tomcat:
+    # driver: brige
+    # ipam: 
+      # driver: default
+      # config: 
+      # - subnet: 192.168.0.0/24
+      # - gateway: 192.168.0.1
+services: 
+  nginx:
+    build: 
+      context: ./nginx
+      dockerfile: Dockerfile
+    ports: 
+      - 81:80
+    links: 
+      - tomcat:tomcat01
+      - tomcat-admin:tomcat-admin
+      - tomcat-wx:tomcat-wx
+      - tomcat-device:tomcat-device
+  tomcat:    
+    image: tomcat:9-jre8
+    # ports: 
+      # - 8081:8080
+    volumes: 
+      - /root/tomcat/tomcat9/webapps:/usr/local/tomcat/webapps
+      - /root/tomcat/tomcat9/logs:/usr/local/tomcat/logs
+  tomcat-admin:    
+    image: tomcat:9-jre8
+    # ports: 
+      # - 8082:8080
+    volumes: 
+      - /root/tomcat/tomcat9/admin/webapps:/usr/local/tomcat/webapps
+      - /root/tomcat/tomcat9/logs:/usr/local/tomcat/logs 
+  tomcat-wx:    
+    image: tomcat:9-jre8
+    # ports: 
+      # - 8083:8080
+    volumes: 
+      - /root/tomcat/tomcat9/wx/webapps:/usr/local/tomcat/webapps
+      - /root/tomcat/tomcat9/logs:/usr/local/tomcat/logs 
+  tomcat-device:    
+    image: tomcat:9-jre8
+    # ports: 
+      # - 8084:8080
+    volumes: 
+      - /root/tomcat/tomcat9/wx/webapps:/usr/local/tomcat/webapps
+      - /root/tomcat/tomcat9/logs:/usr/local/tomcat/logs 

@@ -1,0 +1,10 @@
+version: "3"
+services: 
+  tomcat90_8080:
+    image: tomcat:9-jdk8
+    ports: 
+      - 8080:8080
+    volumes: 
+      - /root/tomcat/tomcat9/webapps:/usr/local/tomcat/webapps
+      - /root/tomcat/tomcat9/logs:/usr/local/tomcat/logs
+    restart: always

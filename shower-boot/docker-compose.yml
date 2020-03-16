@@ -1,0 +1,72 @@
+version: "3"
+networks: 
+  shower:
+services:
+  nginx:
+    build: 
+      context: ./nginx
+      dockerfile: Dockerfile
+    ports: 
+      - 80:80
+      - 443:443
+    networks: 
+      - shower
+    links: 
+      - shower-admin
+      - shower_devices
+  shower-admin:
+    build: 
+      context: ./admin
+      dockerfile: Dockerfile
+    expose: 
+      - 8080
+    ports: 
+      - 8080:8080
+    networks: 
+      - shower
+    depends_on: 
+      - mysql57
+  shower_devices:
+    build: 
+      context: ./device
+      dockerfile: Dockerfile
+    expose: 
+      - 8080
+    ports: 
+      - 8080:8080
+    networks: 
+      - shower
+    depends_on: 
+      - mysql57
+  shower_wx:
+    build: 
+      context: ./wx
+      dockerfile: Dockerfile
+    expose: 
+      - 8080
+    ports: 
+      - 8080:8080
+    networks: 
+      - shower
+    depends_on: 
+      - mysql57
+  mysql57:
+    image: mysql:5.7
+    command: --default-authentication-plugin=mysql_native_password
+    volumes: 
+      - /root/mysql/57/:/var/lib/mysql
+    environment: 
+      MYSQL_ROOT_PASSWORD: root
+    ports: 
+      - 3306:3306
+    expose: 
+      - 3306
+  reids5:
+    image: redis:5.0.8
+    expose: 
+      - 6379
+    ports: 
+      - 6379:6379
+environment: 
+
+  
