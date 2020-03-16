@@ -8,3 +8,4 @@ services:
       - /root/percona:/var/lib/mysql
     environment: 
       MYSQL_ROOT_PASSWORD: root
+    restart: always
