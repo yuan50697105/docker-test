@@ -5,7 +5,7 @@ services:
     ports: 
       - 3309:3306
     volumes: 
-      - /root/percona:/var/lib/mysql
+      - /root/mysql/percona:/var/lib/mysql
     environment: 
       MYSQL_ROOT_PASSWORD: root
     restart: always
