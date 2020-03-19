@@ -6,4 +6,4 @@ services:
       - 9200:9200
       - 9300:9300
     volumes: 
-      - /root/elasticsearch/data:/usr/share/elasticsearch
+      - /root/elasticsearch/data:/usr/share/elasticsearch/data
