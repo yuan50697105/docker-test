@@ -8,4 +8,4 @@ services:
     volumes: 
       - /root/elasticsearch/761/data:/usr/share/elasticsearch/data
     environment: 
-      - discovery.type=single-node
+      - discovery.type:single-node
