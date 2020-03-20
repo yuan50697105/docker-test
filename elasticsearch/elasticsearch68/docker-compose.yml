@@ -9,3 +9,4 @@ services:
       - /root/elasticsearch/687/data:/usr/share/elasticsearch/data
     environment: 
       - discovery.type=single-node
+    privileged: true
