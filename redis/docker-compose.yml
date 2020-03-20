@@ -1,6 +1,6 @@
 version: "3"
 services: 
-  redis:
+  redis5:
     image: redis:5.0.8
     expose: 
       - 6379

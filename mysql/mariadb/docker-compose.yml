@@ -1,6 +1,6 @@
 version: "3"
 services: 
-  mysql80_3307:
+  mariadb:
     image: mariadb:10.5.1
     command: --default-authentication-plugin=mysql_native_password
     volumes: 
@@ -8,5 +8,5 @@ services:
     environment: 
       MYSQL_ROOT_PASSWORD: root
     ports: 
-      - 3308:3306
+      - 3306:3306
     restart: always

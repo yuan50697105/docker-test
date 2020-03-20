@@ -3,7 +3,7 @@ services:
   percona:
     image: percona
     ports: 
-      - 3309:3306
+      - 3306:3306
     volumes: 
       - /root/mysql/percona:/var/lib/mysql
     environment: 

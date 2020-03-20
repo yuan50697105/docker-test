@@ -1,6 +1,6 @@
 version: '3.1'
 services:
-  mongo:
+  mongo3:
     image: mongo:3-xenial
     restart: always
     environment:

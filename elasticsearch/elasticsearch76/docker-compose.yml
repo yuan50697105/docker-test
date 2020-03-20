@@ -1,6 +1,6 @@
 version: "3"
 services: 
-  elasticsearch:
+  elasticsearch76:
     image: elasticsearch:7.6.1
     ports: 
       - 9200:9200
