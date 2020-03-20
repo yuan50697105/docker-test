@@ -9,5 +9,5 @@ services:
     ports: 
       - 27017:27017
     volumes: 
-      - /root/mongo/data:/data/db
+      - /root/mongo/3/data:/data/db
     restart: always
