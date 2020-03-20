@@ -1,7 +1,7 @@
 version: "3"
 services: 
   elasticsearch76:
-    image: docker.elastic.co/elasticsearch/elasticsearch:7.6.1@sha256:d74a4d9aa241cc7fda110a38f1208869407f1242e93c733281452cd9831a0064
+    image: elasticsearch:7.6.1
     ports: 
       - 9200:9200
       - 9300:9300
