@@ -1,0 +1,11 @@
+version: "2"
+services: 
+  percona:
+    image: percona:8.0
+    ports: 
+      - 3306:3306
+    volumes: 
+      - ./data:/var/lib/mysql
+    environment: 
+      MYSQL_ROOT_PASSWORD: root
+    restart: always

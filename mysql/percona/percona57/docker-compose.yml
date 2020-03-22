@@ -1,7 +1,7 @@
-version: "3"
+version: "2"
 services: 
   percona:
-    image: percona
+    image: percona:5.7
     ports: 
       - 3306:3306
     volumes: 
