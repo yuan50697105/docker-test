@@ -1,16 +1,18 @@
 version: "2.2"
 services: 
   elasticsearch76:
-    mem_limit: 2g
-    image: elasticsearch:6.8.1
-    ports: 
-      - 9200:9200
-      - 9300:9300
-    volumes: 
+    image: docker.elastic.co/elasticsearch/elasticsearch:6.8.1
+    environment:
+      - node.name=es01
+      - cluster.name=es-docker-cluster
+      - cluster.initial_master_nodes=es01
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
       - ./data:/usr/share/elasticsearch/data
-      - ./logs:/usr/share/elasticsearch/logs
-    environment: 
-      - discovery.type:single-node
-    command: 
-      - chmod 777 /usr/share/elasticsearch
-    privileged: true
+    ports:
+      - 9200:9200
