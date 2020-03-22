@@ -1,6 +1,7 @@
 version: "3"
 services: 
   elasticsearch76:
+    mem_limit: 2048m
     build: 
       context: .
       dockerfile: Dockerfile
