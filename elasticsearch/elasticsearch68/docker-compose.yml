@@ -1,7 +1,7 @@
 version: "2.2"
 services: 
   elasticsearch76:
-    mem_limit: 2048m
+    mem_limit: 2g
     image: elasticsearch:6.8.1
     ports: 
       - 9200:9200
