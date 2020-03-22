@@ -1,12 +1,14 @@
 version: "3"
 services: 
   elasticsearch68:
-    image: elasticsearch:6.8.7
+    build: 
+      context: .
+      dockerfile: Dockerfile
     ports: 
       - 9200:9200
       - 9300:9300
     volumes: 
-      - /root/elasticsearch/687/data:/usr/share/elasticsearch/data
+      - /root/elasticsearch/68/data:/usr/share/elasticsearch/data
     environment: 
-      - discovery.type=single-node
-    privileged: true  
+      - discovery.type:single-node
+    privileged: true
