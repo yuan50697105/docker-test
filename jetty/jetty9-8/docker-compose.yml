@@ -1,6 +1,6 @@
 version: "3"
 services: 
-  tomcat90_8:
+  jetty9_8:
     image: jetty:9-jre8
     ports: 
       - 8080:8080
