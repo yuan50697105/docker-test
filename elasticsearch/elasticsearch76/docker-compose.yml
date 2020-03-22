@@ -1,4 +1,4 @@
-version: "2.4"
+version: "2.2"
 services: 
   elasticsearch76:
     mem_limit: 2048m
