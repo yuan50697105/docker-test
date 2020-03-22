@@ -8,7 +8,6 @@ services:
       - 9300:9300
     volumes: 
       - ./data:/usr/share/elasticsearch/data
-      - ./logs:/usr/share/elasticsearch/logs
     environment: 
       - discovery.type:single-node
     privileged: true
