@@ -1,4 +1,4 @@
-version: "3"
+version: "2"
 services: 
   jetty9_11:
     image: jetty:9-jre11

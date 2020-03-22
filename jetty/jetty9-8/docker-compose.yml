@@ -1,4 +1,4 @@
-version: "3"
+version: "2"
 services: 
   jetty9_8:
     image: jetty:9-jre8
