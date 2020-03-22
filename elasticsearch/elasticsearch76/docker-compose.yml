@@ -2,9 +2,7 @@ version: "2.2"
 services: 
   elasticsearch76:
     mem_limit: 2048m
-    build: 
-      context: .
-      dockerfile: Dockerfile
+    image: elasticsearch:7.6.1
     ports: 
       - 9200:9200
       - 9300:9300

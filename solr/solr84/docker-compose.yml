@@ -1,9 +1,7 @@
 version: "3"
 services: 
   solr84:
-    build: 
-      context: .
-      dockerfile: Dockerfile
+    image: 
     ports: 
       - 8983:8983
     volumes: 
