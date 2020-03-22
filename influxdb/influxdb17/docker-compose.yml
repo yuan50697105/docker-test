@@ -1,0 +1,14 @@
+version: "2"
+services: 
+  influxdb17:
+    image: influxdb:1.7
+    ports: 
+      - 8086:8086
+    volumes: 
+      - ./data:/var/lib/influxdb
+    environment: 
+      - INFLUXDB_DB=db0
+      - INFLUXDB_ADMIN_USER=admin
+      - INFLUXDB_ADMIN_PASSWORD=admin
+      - INFLUXDB_USER=root
+      - INFLUXDB_USER_PASSWORD=root
