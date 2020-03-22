@@ -1,7 +1,7 @@
 version: "3"
 services: 
-  tomcat90_11:
-    image: tomcat:9-jdk11
+  tomcat90_8:
+    image: jetty:9-jre8
     ports: 
       - 8080:8080
     volumes: 

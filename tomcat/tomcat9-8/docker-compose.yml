@@ -5,6 +5,6 @@ services:
     ports: 
       - 8080:8080
     volumes: 
-      - /root/tomcat/tomcat9/webapps:/usr/local/tomcat/webapps
-      - /root/tomcat/tomcat9/logs:/usr/local/tomcat/logs
+      - ./webapps:/usr/local/tomcat/webapps
+      - ./logs:/usr/local/tomcat/logs
     restart: always
