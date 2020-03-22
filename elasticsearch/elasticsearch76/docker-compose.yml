@@ -9,8 +9,8 @@ services:
       - 9200:9200
       - 9300:9300
     volumes: 
-      - /root/elasticsearch/76/:/usr/share/elasticsearch/
-      # - /root/elasticsearch/76/logs::/usr/share/elasticsearch/logs
+      - /root/elasticsearch/76/data:/usr/share/elasticsearch/data
+      - /root/elasticsearch/76/logs:/usr/share/elasticsearch/logs
     environment: 
       - discovery.type:single-node
     privileged: true
