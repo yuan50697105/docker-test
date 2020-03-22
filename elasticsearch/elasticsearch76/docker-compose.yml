@@ -16,3 +16,4 @@ services:
       - ./data:/usr/share/elasticsearch/data
     ports:
       - 9200:9200
+    restart: always

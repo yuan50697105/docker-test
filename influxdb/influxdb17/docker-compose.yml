@@ -12,3 +12,4 @@ services:
       - INFLUXDB_ADMIN_PASSWORD=admin
       - INFLUXDB_USER=root
       - INFLUXDB_USER_PASSWORD=root
+    restart: always
