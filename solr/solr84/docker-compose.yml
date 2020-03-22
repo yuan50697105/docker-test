@@ -7,5 +7,5 @@ services:
     ports: 
       - 8983:8983
     volumes: 
-      - /root/solr/84/data:/var/solr
+      - ./data:/var/solr
     privileged: true

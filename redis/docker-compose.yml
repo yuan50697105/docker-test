@@ -8,4 +8,4 @@ services:
       - 6379:6379
     command: redis-server --port 6379 --requirepass root  --appendonly yes
     volumes: 
-      - /root/redis/data:/data
+      - ./data:/data

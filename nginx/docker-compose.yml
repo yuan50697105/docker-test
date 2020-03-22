@@ -6,7 +6,7 @@ services:
       - 80:80
     restart: always
     volumes: 
-      - /root/nginx/conf:/etc/nginx/conf.d:rw
-      - /root/nginx/log:/var/log/nginx:rw
-      - /root/nginx/html:/usr/share/nginx/html
+      - ./conf:/etc/nginx/conf.d:rw
+      - ./log:/var/log/nginx:rw
+      - ./html:/usr/share/nginx/html
     
