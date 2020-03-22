@@ -10,4 +10,6 @@ services:
       - ./data:/usr/share/elasticsearch/data
     environment: 
       - discovery.type:single-node
+    command: 
+      - chmod 777 /usr/share/elasticsearch
     privileged: true

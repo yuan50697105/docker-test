@@ -11,4 +11,6 @@ services:
       - ./logs:/usr/share/elasticsearch/logs
     environment: 
       - discovery.type:single-node
+    command: 
+      - chmod 777 /usr/share/elasticsearch
     privileged: true
