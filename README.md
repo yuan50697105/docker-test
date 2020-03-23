@@ -1,12 +1,72 @@
 # 通用注意事项
 
+- 安装Docker
+- Cent OS 7
+
+```shell
+  更新依赖
+  sudo yum update
+  删除旧版docker
+  sudo yum remove docker  docker-common docker-selinux docker-engine
+  sudo yum install -y yum-utils device-mapper-persistent-data lvm2
+  sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+  sudo yum install docker-ce
+  
+  sudo systemctl start docker
+  sudo systemctl enable docker
+  安装docker-compose
+  sudo yum install docker-compose
+```
+
+- Cent OS 8
+
+```shell
+sudo yum install -y yum-utils  device-mapper-persistent-data  lvm2
+ 
+sudo yum-config-manager  --add-repo   https://download.docker.com/linux/centos/docker-ce.repo
+ 
+sudo yum install docker-ce docker-ce-cli containerd.io
+```
+
+- Ubuntu
+
+```shell
+卸载可能存在的旧版本
+sudo apt-get remove docker docker-engine docker-ce docker.io
+
+更新apt包
+sudo apt-get update
+
+通过HTTPS使用仓库(repository)安装
+sudo apt install apt-transport-https ca-certificates curl software-properties-common
+
+在/etc/apt/sources.list.d/docker.list文件中添加下面内容
+deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable
+
+添加Docker官方的GPG密钥
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+安装
+sudo apt install docker-ce
+```
+
+
+
 - ## 修改虚拟内存
 
+```
 sysctl -w vm.max_map_count=262144
+```
+
+
 
 - ## 授权
 
+```
 chmod 777 xxxx路径
+```
+
+
 
 # elasticsearch
 
