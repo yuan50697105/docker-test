@@ -66,6 +66,12 @@ sysctl -w vm.max_map_count=262144
 chmod 777 xxxx路径
 ```
 
+- ## Docker-Compose
+
+```shell
+docker-compose up -d
+```
+
 
 
 # elasticsearch
