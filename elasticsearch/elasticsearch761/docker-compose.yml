@@ -1,7 +1,6 @@
 version: "2.2"
 services: 
-  elasticsearch76:
-    # image: docker.elastic.co/elasticsearch/elasticsearch:7.6.1
+  elasticsearch761:
     build: 
       context: .
       dockerfile: Dockerfile
