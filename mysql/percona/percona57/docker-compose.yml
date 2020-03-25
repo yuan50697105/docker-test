@@ -9,3 +9,5 @@ services:
     environment: 
       MYSQL_ROOT_PASSWORD: root
     restart: always
+    privileged: true
+

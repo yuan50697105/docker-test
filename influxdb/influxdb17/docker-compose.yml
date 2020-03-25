@@ -13,3 +13,4 @@ services:
       - INFLUXDB_USER=root
       - INFLUXDB_USER_PASSWORD=root
     restart: always
+    privileged: true

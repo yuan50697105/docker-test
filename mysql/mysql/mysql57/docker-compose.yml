@@ -1,4 +1,6 @@
 version: "2"
+networks: 
+  mysql:
 services: 
   mysql57:
     image: mysql:5.7
@@ -9,4 +11,7 @@ services:
       MYSQL_ROOT_PASSWORD: root
     ports: 
       - 3306:3306
+    networks: 
+      - mysql
     restart: always
+    privileged: true

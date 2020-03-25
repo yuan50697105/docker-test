@@ -1,5 +1,0 @@
-version: "2.2"
-services: 
-  elasticsearch76:
-    image: couchbase:community-6.5.0
-    restart: always

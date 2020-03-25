@@ -9,4 +9,6 @@ services:
       - ./conf:/etc/nginx/conf.d:rw
       - ./log:/var/log/nginx:rw
       - ./html:/usr/share/nginx/html
+    privileged: true
+    
     

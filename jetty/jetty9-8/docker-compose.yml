@@ -8,3 +8,5 @@ services:
       - ./webapps:/usr/local/tomcat/webapps
       - ./logs:/usr/local/tomcat/logs
     restart: always
+    privileged: true
+    

@@ -7,3 +7,5 @@ services:
     command: redis-server --port 6379 --requirepass root  --appendonly yes
     volumes: 
       - ./data:/data
+    privileged: true
+    

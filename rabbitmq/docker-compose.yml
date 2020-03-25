@@ -11,3 +11,4 @@ services:
       RABBITMQ_DEFAULT_USER: root
       RABBITMQ_DEFAULT_PASS: root
     restart: always
+    privileged: true

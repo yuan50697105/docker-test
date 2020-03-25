@@ -11,3 +11,4 @@ services:
     volumes: 
       - ./data:/data/db
     restart: always
+    privileged: true
