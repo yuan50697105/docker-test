@@ -19,7 +19,4 @@ services:
       - ./data:/usr/share/elasticsearch/data
     ports:
       - 9200:9200
-    command: 
-      - ./bin/elasticsearch-plugin install https://github.com/medcl/elasticsearch-analysis-ik/releases/download/v7.6.1/elasticsearch-analysis-ik-7.6.1.zip
-      - ./bin/elasticsearch-plugin install https://github.com/medcl/elasticsearch-analysis-pinyin/releases/download/v7.6.1/elasticsearch-analysis-pinyin-7.6.1.zip
     restart: always

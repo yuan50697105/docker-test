@@ -1,7 +1,10 @@
 version: "2.2"
 services: 
   elasticsearch76:
-    image: docker.elastic.co/elasticsearch/elasticsearch:6.8.1
+    # image: docker.elastic.co/elasticsearch/elasticsearch:6.8.1
+    build: 
+      context: .
+      dockerfile: Dockerfile
     environment:
       - node.name=es01
       - cluster.name=es-docker-cluster
