@@ -1,0 +1,11 @@
+version: "2"
+services: 
+  redis5:
+    image: redis:5.0.8
+    ports: 
+      - 6379:6379
+    command: redis-server --port 6379 --requirepass root  --appendonly yes
+    volumes: 
+      - ./data:/data
+    privileged: true
+    
