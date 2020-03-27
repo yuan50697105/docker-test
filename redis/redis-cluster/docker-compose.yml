@@ -1,0 +1,32 @@
+version: "2"
+networks: 
+  redis_cluster:
+services: 
+  redis_master:
+    image: redis:5.0.8
+    ports: 
+      - 6379:6379
+    command: redis-server --port 6379 --requirepass root  --appendonly yes
+    volumes: 
+      - /root/redis/data:/data
+    networks: 
+      - redis_cluster
+  redis_slave_1:
+    image: redis:5.0.8
+    command: redis-server --slaveof redis-master 6379 --requirepass root --masterauth root --appendonly yes
+    volumes: 
+      - /root/redis/data:/data
+    depends_on: 
+      - redis_master
+    networks: 
+      - redis_cluster
+  redis_slave_2:
+    image: redis:5.0.8
+    command: redis-server --slaveof redis-master 6379 --requirepass root --masterauth root --appendonly yes
+    volumes: 
+      - /root/redis/data:/data
+    depends_on: 
+      - redis_master
+    networks: 
+      - redis_cluster
+    
