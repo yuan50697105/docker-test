@@ -91,11 +91,17 @@ sysctl -w vm.max_map_count=262144
 chmod 777 xxxx路径
 ```
 
+- ## Docker Shell
+
+- ## Dockerfile
+
 - ## Docker-Compose
 
 ```shell
 docker-compose up -d
 ```
+
+- ## Docker Swarm
 
 
 
