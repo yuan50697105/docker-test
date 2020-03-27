@@ -50,11 +50,36 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo apt install docker-ce
 ```
 
+- ## 开启远程
+
+```
+访问并修改Docker配置文件  
+vi /lib/systemd/system/docker.service　
+
+```
+<img src="C:\Users\Administrator\Downloads\1817484-20190926214747673-507823979.png" alt="1817484-20190926214747673-507823979" style="zoom: 67%;" />
+
+```shell
+修改daemon.json  
+vi /etc/docker/daemon.json
+```
+
+<img src="C:\Users\Administrator\Downloads\1817484-20190926224044817-2131152622.png" alt="1817484-20190926224044817-2131152622" style="zoom: 80%;" />
+
+```shell
+刷新配置并重启服务
+
+　　　　systemctl daemon‐reload
+
+　　　　systemctl restart docker
+```
+
+
 
 
 - ## 修改虚拟内存
 
-```
+```shell
 sysctl -w vm.max_map_count=262144
 ```
 
@@ -62,7 +87,7 @@ sysctl -w vm.max_map_count=262144
 
 - ## 授权
 
-```
+```shell
 chmod 777 xxxx路径
 ```
 
