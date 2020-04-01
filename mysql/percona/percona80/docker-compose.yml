@@ -3,7 +3,7 @@ services:
   percona:
     image: percona:8.0
     ports: 
-      - 3306:3306
+      - 3307:3306
     volumes: 
       - ./data:/var/lib/mysql
     environment: 
