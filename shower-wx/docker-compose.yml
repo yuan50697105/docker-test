@@ -1,0 +1,14 @@
+version: "2"
+networks: 
+  shower:
+services:
+  shower_wx:
+    container_name: shower_wx
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    expose: 
+      - 8002
+    ports: 
+      - 8002:8002
+  
