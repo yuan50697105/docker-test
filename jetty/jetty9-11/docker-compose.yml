@@ -5,8 +5,8 @@ services:
     ports: 
       - 8080:8080
     volumes: 
-      - ./webapps:/usr/local/tomcat/webapps
-      - ./logs:/usr/local/tomcat/logs
+      - ./data/webapps:/usr/local/tomcat/webapps
+      - ./data/logs:/usr/local/tomcat/logs
     restart: always
     privileged: true
     
