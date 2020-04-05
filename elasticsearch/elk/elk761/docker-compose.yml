@@ -25,6 +25,6 @@ services:
     environment: 
      - ELASTICSEARCH_URL=http://127.0.0.1:9200
     links: 
-      - elasticsearch761
+      - elasticsearch761:elasticsearch
     ports: 
       - 5601:5601
