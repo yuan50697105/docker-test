@@ -1,0 +1,9 @@
+version: "2"
+services: 
+  kibana:
+    image: kibana:6.8.6
+    environment:
+      SERVER_NAME: kibana
+      ELASTICSEARCH_URL: http://localhost:9200
+    ports:
+      - "5601:5601"
