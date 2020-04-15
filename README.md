@@ -91,8 +91,6 @@ sysctl -w vm.max_map_count=262144
 chmod 777 xxxx路径
 ```
 
-- ## Docker Shell
-
 - ## Dockerfile
 
 - ## Docker-Compose
@@ -102,6 +100,31 @@ docker-compose up -d
 ```
 
 - ## Docker Swarm
+
+- ## Docker Shell
+
+1. docker run 启动镜像 此时镜像转换为容器
+   1. 拥有各种参数
+      1. -p 端口 如 80:80 左边是容器外真实主机端口，右边是容器内端口
+      2. -v 持久卷（容器外保存） ru var:var
+      3. -e 环境变量 需要预设到Dockerfile中 如 ENV1=aaa
+      4. 其他
+2. docker start 启动容器
+3. docker restart 重启容器
+4. docker stop 停止容器
+5. docker rm 删除容器（默认只能删除已停止的容器）
+6. docker rmi 删除镜像
+7. docker logs 容器日志
+8. docker image 镜像相关操作
+9. docker container 容器相关操作
+10. docker network 网络相关
+11. docker-compose 
+    1. up docker-compose自动启动（非后台）
+    2. -d 转换为后台
+    3. --build 重建
+    4. --force-build 强制重建
+    5. down 结束所有 
+    6. up 和 down 可以跟具体的服务名称
 
 
 
